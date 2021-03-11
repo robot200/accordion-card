@@ -1,0 +1,91 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(
+      180deg,
+      hsl(273, 75%, 66%) 0%,
+      hsl(240, 73%, 65%) 100%
+    )
+    no-repeat;
+  font-family: "Kumbh Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card {
+  margin: 0 auto;
+  border: 0;
+  border-radius: 30px;
+  background: whitesmoke;
+  width: 65%;
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pic {
+  width: 50%;
+  background: url(/images/bg-pattern-desktop.svg) no-repeat;
+  background-size: 110%;
+  background-position: 270% 230%;
+  position: relative;
+  overflow: hidden;
+}
+.pic img {
+  margin: 5rem 0;
+  position: relative;
+  left: -2rem;
+}
+.box {
+  overflow: visible;
+  z-index: 2;
+}
+.pic :nth-child(2) {
+  position: relative;
+  top: -25rem;
+  left: -5rem;
+}
+
+.faq {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.dropdown {
+  cursor: pointer;
+}
+h4 {
+  display: inline;
+}
+.arrow {
+  float: right;
+  padding: 0.2rem 10rem 0 0;
+}
+.hidden {
+  display: none;
+}
+
+.attribution {
+  margin-top: 1rem;
+}
+
+@media all and (max-width: 1440px) {
+  .card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .pic {
+    order: 1;
+    top: -15rem;
+  }
+  .faq {
+    order: 2;
+    margin: 0;
+  }
+}
